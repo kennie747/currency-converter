@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src='MyCurrencyConverter.js'> </script>
+<!-- <script type="text/javascript" src='SelectFromDropDown.js'> </script> -->
+<script type="text/javascript" src='Validation.js'> </script>
+<link rel="stylesheet" href="validity.css">
+</head>
+<body>
+
+<fieldset>
+<form name = "myForm" onsubmit="return validateForm()">
+
+    <legend>Currency Converter</legend>
+
+    <label for="myInputAmount">Amount: </label>
+    <input type="number" id="myInputAmount" name="myInputAmount"
+           placeholder="1" step="1"
+           min="1" max="1000000000" value="1"/>
+      <!--      placeholder="Min: 1, Max: 1000000000" step="1" -->
+    <!-- <span class="validity"></span> -->
+
+<!-- <br><br> -->
+ <!-- Select your Currencies: -->
+<!-- <br> -->
+<label for="From">From: </label>
+<select id="myFromSelection">
+  <option>PHP</option>
+  <option>NGN</option>
+  <option>USD</option>
+  <option>CAD</option>
+</select>
+ 
+<label for="To">To: </label>
+<select id="myToSelection">
+  <option>PHP</option>
+  <option>NGN</option>
+  <option>USD</option>
+  <option>CAD</option>
+</select>
+
+<br>
+<!-- <input hidden type="text"  id="myHidden" name ="fname"> -->
+
+<label for="button"> </label><input  type="button" onclick="getOption()" value="Convert!">
+<!-- <span class="validity"></span> -->
+<label for="myHidden"> Converted Value: </label><input  type="text"  id="myHidden" name ="myHidden" readonly>
+
+</form>
+
+<p id="demo"></p>
+
+</fieldset>
+</body>
+</html>
